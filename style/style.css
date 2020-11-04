@@ -1,7 +1,18 @@
-li{
+li, .display{
     display: inline;
 }
 .navbar{
     text-align: right;
     margin-right: 20px;
 }
+logo{
+    height: 30px;
+    width: 30px;
+    text-align: left;
+}
+.details {
+    display: flex;
+    margin-right: 20px;
+  }
+  
+  
