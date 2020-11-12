@@ -1,5 +1,4 @@
-
-body{
+body {
     /* background-color: rgba(38, 0, 56); */
     background-image: url('../../structuredHTML/resource/images/background.jpg');
     background-size: cover;
@@ -10,11 +9,11 @@ body{
     padding: 0%;
 }
 
-hr{
+hr {
     width: 80%;
 }
 
-.nav-container{
+.nav-container {
     background-color: rgb(29, 29, 29);
     position: fixed;
     top: 0;
@@ -26,114 +25,123 @@ hr{
     justify-content: space-between;
 
 }
-.nav-bar{
+
+.nav-bar {
     width: 80%;
     display: flex;
     justify-content: right;
 
 }
-.nav-item{
+
+.nav-item {
     display: inline;
     margin-right: 20px;
 }
 
-.nav-container a{
-    color:  white;
+.nav-container a {
+    color: white;
     background-color: transparent;
     text-decoration: none;
-    
-  }
 
-.nav-container a:hover{
+}
+
+.nav-container a:hover {
     border-bottom: 1px solid rgb(241, 211, 255);
 }
-.logo{
+
+.logo {
     margin-left: 1%;
     width: 8%;
     text-align: center;
 }
 
-.logo-img{
+.logo-img {
     width: 50px;
     height: auto;
 }
 
-.banner{
+.banner {
     background-image: url(../resource/images/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     height: 100vh;
-    
+
 }
-.banner-container{
+
+.banner-container {
     height: 100%;
     background-color: rgb(73, 73, 73, 0.7);
-    
+
 }
-.banner-details{
-    margin-top:10vh;
+
+.banner-details {
+    margin-top: 10vh;
     padding-top: 10%;
-    text-align: center;   
-    font-size: 5vh; 
+    text-align: center;
+    font-size: 5vh;
 }
-.banner-details a{
+
+.banner-details a {
     display: inline;
     background-color: #0062ff;
     color: rgb(241, 211, 255);
     text-decoration: none;
     border-radius: 20px;
     border: 1px solid rgb(241, 211, 255);
-    padding:5px; 
+    padding: 5px;
 }
 
-.box{
+.box {
     background-color: rgb(73, 73, 73, 0.8);
     margin: 1% 10%;
 }
 
-.section-container{
+.section-container {
     margin-top: 5%;
 }
 
-footer{
+footer {
     background-color: rgb(29, 29, 29);
-    border:1px solid white;
+    border: 1px solid white;
 }
-.footer-content{
+
+.footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1%;   
+    margin: 1%;
 }
 
-.footer-links a{
+.footer-links a {
     color: rgb(241, 211, 255);
 }
-  
-.section-content{
+
+.section-content {
     display: flex;
     align-items: flex-start;
     margin: 5%;
 }
-.section-image img{
+
+.section-image img {
     border: 0px;
     border-radius: 100%;
-    height:auto; 
-    width:30vw;
+    height: auto;
+    width: 30vw;
 }
-.section-details{
+
+.section-details {
     margin-left: 10%;
     height: auto;
 
 }
 
-main{
+main {
     position: relative;
 }
 
 
-.top{
+.top {
     position: sticky;
     top: 80vh;
     text-align: right;
@@ -143,7 +151,7 @@ main{
     bottom: 10px; */
 }
 
-.top img{
+.top img {
     width: 5vw;
     height: auto;
     border: none;
@@ -151,51 +159,100 @@ main{
     background-color: rgb(241, 211, 255);
 }
 
-.top a{
-    display:inline;
+.top a {
+    display: inline;
     margin-right: 4%;
     color: white;
 }
 
-.aside-container{
+.aside-container {
     text-align: center;
     background-color: rgb(29, 29, 29);
 }
-.aside-container h3{
+
+.aside-container h3 {
     width: 100%;
 }
 
-.aside-content{
+.aside-content {
     margin: auto;
     width: 80%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
 }
-.aside-links{
+
+.aside-links {
     color: rgb(241, 211, 255);
 }
-.box1{
+
+.box1 {
     border-radius: 1%;
     background-color: rgb(29, 29, 29);
     /* border: 1px solid white; */
 }
 
-.hamburger-img{
+.hamburger-div {
     display: none;
 }
 
-@media (max-width: 768px){
-    .nav-bar{
+.hamburger-nav-bar {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .nav-bar {
         display: none;
     }
-    .hamburger-img{
+
+    .hamburger-div {
         display: block;
-        margin-top: 1%;
-        margin-right: 2%;
     }
 
-    .section-content{
+    .hamburger-div:hover .hamburger-nav-bar {
+        display: block;
+    }
+
+    .hamburger {
+        margin-right: 2%;
+        border: 1px solid white;
+        height: 50px;
+        width: 50px;
+        margin-top: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburger-lines {
+        width: 80%;
+        border: 1px solid white;
+    }
+
+    .hamburger-div:hover .hamburger-lines {
+        position: absolute;
+        transition-property: transform;
+        transition-duration: 2s;
+        transition-timing-function: linear;
+
+    }
+
+    .hamburger-div:hover .line1 {
+        transform: rotate(45deg);
+    }
+
+    .hamburger-div:hover .line3 {
+        transform: rotate(-45deg);
+    }
+
+    .hamburger-div:hover .line2 {
+        display: none;
+    }
+
+    .section-content {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -203,43 +260,51 @@ main{
         align-items: center;
         height: 80vh;
     }
-    
-    .section-image{
+
+    .section-image {
         width: 80%;
         height: 60%;
     }
-    .section-image img{
+
+    .section-image img {
         border: 0px;
         border-radius: 0;
         height: 100%;
-        width:100%;
+        width: 100%;
     }
-    .section-details{
+
+    .section-details {
         margin-left: 0%;
         height: 30%;
         width: 80%;
         overflow-y: scroll;
         overflow-x: hidden;
     }
-    .banner{
+
+    .banner {
         height: 100vh;
-     }
-    .banner-details{
+    }
+
+    .banner-details {
         flex-direction: column;
         height: 100%;
     }
-    .banner-img{
+
+    .banner-img {
         width: 80%;
         height: auto;
     }
-    .banner-img img{
+
+    .banner-img img {
         border-radius: 50%;
     }
-    .banner-items{
+
+    .banner-items {
         width: 80%;
         height: auto;
     }
-    .aside-content{
+
+    .aside-content {
         margin: auto;
         width: 80%;
         height: 100%;
@@ -248,8 +313,9 @@ main{
         align-items: flex-start;
         justify-content: space-evenly;
     }
-    .aside-links{
+
+    .aside-links {
         color: rgb(241, 211, 255);
     }
-    
+
 }
