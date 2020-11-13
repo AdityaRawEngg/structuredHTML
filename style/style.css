@@ -7,6 +7,7 @@ body {
     color: rgb(241, 211, 255);
     margin: 0%;
     padding: 0%;
+    scroll-behavior: smooth;
 }
 
 hr {
@@ -263,7 +264,7 @@ main {
 
     .section-image {
         width: 80%;
-        height: 60%;
+        height: 50vh;
     }
 
     .section-image img {
@@ -273,12 +274,18 @@ main {
         width: 100%;
     }
 
-    .section-details {
-        margin-left: 0%;
-        height: 30%;
-        width: 80%;
+    .scroll {
+        scroll-behavior: smooth;
         overflow-y: scroll;
         overflow-x: hidden;
+
+    }
+
+    .section-details {
+        margin-left: 0%;
+        margin-bottom: 10%;
+        height: 20vh;
+        width: 80%;
     }
 
     .banner {
